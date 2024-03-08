@@ -5,7 +5,6 @@ const auth = document.getElementById("auth");
 const getQuote = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
-    // console.log(data);
     quotebox.innerHTML = data[0].content;
     auth.innerHTML = data[0].author;
 }
